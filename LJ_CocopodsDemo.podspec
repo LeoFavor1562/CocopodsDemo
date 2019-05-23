@@ -41,7 +41,8 @@ Pod::Spec.new do |spec|
 
   #需要包含的文件路径，多个用","隔开（是远端库里源文件的路径）
   #具体路径规则如以下几个文件位置
-  spec.source_files  = "CocopodsDemo", "CocopodsDemo/**/*.{h,m}", "CocopodsDemo/**/**/*.{h,m}"
+  #spec.source_files  = "CocopodsDemo", "CocopodsDemo/**/*.{h,m}", "CocopodsDemo/**/**/*.{h,m}"
+  spec.source_files  = "CocopodsDemo"
   #包含路径中，不要包含的文件
   spec.exclude_files = "CocopodsDemo/**/FileD.{h,m}"
 
