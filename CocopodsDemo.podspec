@@ -1,3 +1,4 @@
+#详细说明见：https://guides.cocoapods.org/syntax/podspec.html
 
 Pod::Spec.new do |spec|
 
@@ -40,10 +41,11 @@ Pod::Spec.new do |spec|
 
   #需要包含的文件路径，多个用","隔开（是远端库里源文件的路径）
   #具体路径规则如以下几个文件位置
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.source_files  = "CocopodsDemo", "CocopodsDemo/**/*.{h,m}", "CocopodsDemo/**/**/*.{h,m}"
   #包含路径中，不要包含的文件
-  #spec.exclude_files = "Classes/Exclude"
+  spec.exclude_files = "CocopodsDemo/**/FileD.{h,m}"
 
+#这些头文件将公开给用户的项目，并从中生成文档。构建库时，这些头将出现在build目录中。如果没有指定公共标头，则source_files中的所有标头都被认为是公共的。
   # spec.public_header_files = "Classes/**/*.h"
 
 
@@ -61,12 +63,7 @@ Pod::Spec.new do |spec|
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
+  #需要引用的framwork和lib
   # spec.framework  = "SomeFramework"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
 
@@ -74,15 +71,13 @@ Pod::Spec.new do |spec|
   # spec.libraries = "iconv", "xml2"
 
 
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
+  #是否是arc环境
+  spec.requires_arc = true
 
-  # spec.requires_arc = true
-
+  #对应xcode-target-build settings中的HEADER_SEARCH_PATHS
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+
+  #依赖的其他库
   # spec.dependency "JSONKit", "~> 1.4"
 
 end
