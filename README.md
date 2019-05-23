@@ -36,3 +36,4 @@ podspec文件是cocopods的索引文件，通过这个文件才能在cocopods中
 2.podspec具体内容见“CocopodsDemo.podspec”文件
 3.$ pod spec lint #{podspec文件名，包含后缀} 验证文件，成功会提示：CocopodsDemo.podspec passed validation. 有错误百度
 4.验证无误后，
+
