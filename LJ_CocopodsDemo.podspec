@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
 
   #基本信息
   spec.name         = "LJ_CocopodsDemo" #库的名字，pod search 时的名字，需要与该文件名相同，否则报错
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "这是一个摘要"
 
  #描述，需要写在两个DESC中间
