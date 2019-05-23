@@ -36,5 +36,8 @@ podspec文件是cocopods的索引文件，通过这个文件才能在cocopods中
 2.podspec具体内容见“CocopodsDemo.podspec”文件
 3.$ pod spec lint #{podspec文件名，包含后缀} 验证文件，成功会提示：CocopodsDemo.podspec passed validation. 有错误百度
 4.验证无误后，将podspec文件上传git
-5.把podspec文件推送到CocoaPod官方库$ pod trunk push CocopodsDemo.podspec
-
+5.把podspec文件推送到CocoaPod官方库$ pod trunk push CocopodsDemo.podspec（如果提示{"name"=>["is already taken"]}，就是重名了，需要改个名字，然后重新执行3、4、5）
+6.用pod搜索
+$ pod search #{库名}
+新上传的库可能会搜不到，先pod setup更新我们本地的CocoaPods space库,如果还是不可以，清理下搜索缓存
+$ rm ~/Library/Caches/CocoaPods/search_index.json

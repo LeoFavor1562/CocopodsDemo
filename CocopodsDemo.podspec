@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
   #基本信息
-  spec.name         = "CocopodsDemo"
+  spec.name         = "LJ_CocopodsDemo"
   spec.version      = "0.0.1"
   spec.summary      = "这是一个摘要"
 
