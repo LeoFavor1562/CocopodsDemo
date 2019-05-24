@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   # 基本信息
   spec.name         = "LJ_CocopodsDemo" # 库的名字，pod search 时的名字，需要与该文件名相同，否则报错
   # 每次向CocoaPod官方库提交podsec都需要增加tag，版本库如果不存在这个tag则无法提交
-  spec.version      = "0.0.5"
+  spec.version      = "0.0.6"
   spec.summary      = "这是一个摘要"
 
  # 描述，需要写在两个DESC中间
@@ -44,7 +44,7 @@ Pod::Spec.new do |spec|
   # 具体路径规则如以下几个文件位置
   # "CocopodsDemo"：CocopodsDemo文件夹下的所有文件
   # "CocopodsDemo/**/*.{h,m}"：CocopodsDemo文件夹下的所有文件夹下的所有.h和.m文件
-  # cocopods暂时只能添加文件，不能添加文件夹，若存在多层结构，所有文件最后都会混在一起，不过可以subspec来划分功能模块，每个subspec最终会变成xcode中的gruop，这样虽然文件都混在一起，但从xcode的文件列表看，模块是被group分开了的，如果指定了subspec，这里就不要包含subspec里的文件了，否则会重复包含
+  # cocopods暂时只能添加文件，不能添加文件夹，若存在多层结构，所有文件最后都会混在一起，不过可以subspec来划分功能模块，每个subspec最终会变成xcode中的gruop，这样虽然文件都混在一起，但从xcode的文件列表看，模块是被group分开了的，如果指定了subspec，这里就不要包含subspec里的文件了，否则虽然group会被创建，但是subspec的文件还是会与spec的文件平级
   spec.source_files  = "CocopodsDemo", "CocopodsDemo/**/*.{h,m}", "CocopodsDemo/**/**/*.{h,m}"
   #spec.source_files  = "CocopodsDemo/**"
   # 包含路径中，不要包含的文件
@@ -85,7 +85,8 @@ Pod::Spec.new do |spec|
   # 依赖的其他库
   spec.dependency "Masonry", "~> 1.1.0"
 
-  # 添加子规范，
+  # 添加子规范，可以把相对独立的功能模块区分开来
+  #子规范会自动成为父规范的依赖，子规范继承父规范的公共配置（不复写的话）
   spec.subspec 'LJTagView' do |sp|
         sp.source_files = 'CocopodsDemo/LJTagView/*.{h,m}'
         #sp.public_header_files = ''
