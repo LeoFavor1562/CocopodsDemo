@@ -48,7 +48,7 @@ Pod::Spec.new do |spec|
   spec.source_files  = "CocopodsDemo", "CocopodsDemo/**/*.{h,m}", "CocopodsDemo/**/**/*.{h,m}"
   #spec.source_files  = "CocopodsDemo/**"
   # 包含路径中，不要包含的文件
-  spec.exclude_files = "CocopodsDemo/**/FileD.{h,m}"
+  spec.exclude_files = "CocopodsDemo/**/FileD.{h,m}", "CocopodsDemo/LJTagView/*.{h,m}"
 
 # 这些头文件将公开给用户的项目，并从中生成文档。构建库时，这些头将出现在build目录中。如果没有指定公共标头，则source_files中的所有标头都被认为是公共的。
   # spec.public_header_files = "Classes/**/*.h"
