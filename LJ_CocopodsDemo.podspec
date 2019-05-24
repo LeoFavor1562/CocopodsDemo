@@ -79,8 +79,8 @@ Pod::Spec.new do |spec|
   # 是否是arc环境
   spec.requires_arc = true
 
-  # 对应xcode-target-build settings中的HEADER_SEARCH_PATHS
-  # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  # 对应target-build settings中的配置，具体的KEY到project.pbxproj中可以找到
+  spec.xcconfig = { "CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF" => "NO" }
 
   # 依赖的其他库
   spec.dependency "Masonry", "~> 1.1.0"
