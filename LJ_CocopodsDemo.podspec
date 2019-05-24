@@ -4,7 +4,8 @@ Pod::Spec.new do |spec|
 
   #基本信息
   spec.name         = "LJ_CocopodsDemo" #库的名字，pod search 时的名字，需要与该文件名相同，否则报错
-  spec.version      = "0.0.2"
+  #每次向CocoaPod官方库提交podsec都需要增加tag，版本库如果不存在这个tag则无法提交
+  spec.version      = "0.0.3"
   spec.summary      = "这是一个摘要"
 
  #描述，需要写在两个DESC中间
@@ -42,7 +43,7 @@ Pod::Spec.new do |spec|
   #需要包含的文件路径，多个用","隔开（是远端库里源文件的路径）
   #具体路径规则如以下几个文件位置
   #spec.source_files  = "CocopodsDemo", "CocopodsDemo/**/*.{h,m}", "CocopodsDemo/**/**/*.{h,m}"
-  spec.source_files  = "CocopodsDemo"
+  spec.source_files  = "CocopodsDemo/**"
   #包含路径中，不要包含的文件
   spec.exclude_files = "CocopodsDemo/**/FileD.{h,m}"
 
