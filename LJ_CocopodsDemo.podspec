@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
 
   # 对应target-build settings中的配置，具体的KEY到project.pbxproj中可以找到
-  spec.xcconfig = { "CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF" => "NO" }
+  spec.xcconfig = { "CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF" => "NO", "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES" }
 
   # 依赖的其他库
   spec.dependency "MJExtension", "~> 3.0.15.1"
