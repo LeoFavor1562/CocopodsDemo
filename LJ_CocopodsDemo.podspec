@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   # 基本信息
   spec.name         = "LJ_CocopodsDemo" # 库的名字，pod search 时的名字，需要与该文件名相同，否则报错
   # 每次向CocoaPod官方库提交podsec都需要增加tag，版本库如果不存在这个tag则无法提交
-  spec.version      = "0.0.6"
+  spec.version      = "0.0.7"
   spec.summary      = "这是一个摘要"
 
  # 描述，需要写在两个DESC中间
@@ -89,7 +89,6 @@ Pod::Spec.new do |spec|
   #子规范会自动成为父规范的依赖，子规范继承父规范的公共配置（不复写的话）
   spec.subspec 'LJTagView' do |sp|
         sp.source_files = 'CocopodsDemo/LJTagView/*.{h,m}'
-        #sp.public_header_files = ''
   end
 
 end
