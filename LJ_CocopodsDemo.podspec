@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   # 基本信息
   spec.name         = "LJ_CocopodsDemo" # 库的名字，pod search 时的名字，需要与该文件名相同，否则报错
   # 每次向CocoaPod官方库提交podsec都需要增加tag，版本库如果不存在这个tag则无法提交
-  spec.version      = "0.0.7"
+  spec.version      = "0.0.8"
   spec.summary      = "这是一个摘要"
 
  # 描述，需要写在两个DESC中间
