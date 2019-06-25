@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   # 基本信息
   spec.name         = "LJ_CocopodsDemo" # 库的名字，pod search 时的名字，需要与该文件名相同，否则报错
   # 每次向CocoaPod官方库提交podsec都需要增加tag，版本库如果不存在这个tag则无法提交
-  spec.version      = "0.0.8"
+  spec.version      = "0.0.9"
   spec.summary      = "这是一个摘要"
 
  # 描述，需要写在两个DESC中间
@@ -83,7 +83,7 @@ Pod::Spec.new do |spec|
   spec.xcconfig = { "CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF" => "NO" }
 
   # 依赖的其他库
-  spec.dependency "Masonry", "~> 1.1.0"
+  spec.dependency "MJExtension", "~> 3.0.15.1"
 
   # 添加子规范，可以把相对独立的功能模块区分开来
   #子规范会自动成为父规范的依赖，子规范继承父规范的公共配置（不复写的话）
