@@ -7,6 +7,7 @@
 //
 
 #import "LJTagView.h"
+#import "Masonry.h"
 
 @implementation LJTagViewConfig
 

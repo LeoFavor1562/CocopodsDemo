@@ -84,6 +84,7 @@ Pod::Spec.new do |spec|
 
   # 依赖的其他库
   spec.dependency "MJExtension", "~> 3.0.15.1"
+  spec.dependency "Masonry", "~> 1.1.0"
 
   # 添加子规范，可以把相对独立的功能模块区分开来
   #子规范会自动成为父规范的依赖，子规范继承父规范的公共配置（不复写的话）
